@@ -20,13 +20,12 @@ header .header-logo-base {
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: center;
 
-    height: 600px;
-
     background-color: #aaaaaa;
 }
 
 header img {
     max-width: 100%;
+    visibility: hidden;
 }
 
 header h1 {
