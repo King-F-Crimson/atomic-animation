@@ -1,0 +1,80 @@
+body {
+    font-family: "Open Sans";
+    color: #bababa;
+    max-width: 800px;
+    margin: 2em auto;
+
+    padding: 0 2em;
+
+    background-color: #000000;
+}
+
+header .header-logo-base {
+    mask-image: url("header.png");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+
+    -webkit-mask-image: url("header.png");
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+
+    height: 600px;
+
+    background-color: #aaaaaa;
+}
+
+header img {
+    max-width: 100%;
+}
+
+header h1 {
+    text-align: center;
+}
+
+header p {
+    text-align: center;
+}
+
+header hr {
+    margin: 60px 0;
+}
+
+.atomic-container {
+    display: flex;
+}
+
+.atomic-container .text-content-container {
+    flex: 1;
+}
+
+.atomic-container .animation-container {
+    flex: 2;
+
+    max-width: 300px;
+}
+
+.atomic-container .animation-container .animation {
+    position: sticky;
+    top: 50%;
+
+    border: solid #bababa;
+    box-sizing: border-box;
+
+    width: 300px;
+    height: 300px;
+}
+
+.atomic-container .slide {
+    min-height: 300px;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.nuclear-container {
+    height: 5000px;
+}
