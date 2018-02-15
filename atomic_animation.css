@@ -1,5 +1,7 @@
-.atom-nucleus {
-    background-color: #9C27B0;
+/* Dalton */
+
+.atom-dalton {
+    background-color: #673AB7;
     width: 50%;
     height: 50%;
     border-radius: 50%;
@@ -9,28 +11,220 @@
     left: 25%;
 }
 
-.atom-electron-orbit {
-    width: 100%;
-    height: 100%;
-
-    position: absolute;
-
-    animation: orbit-electron 10s linear infinite;
-}
+/* Electron base */
 
 .atom-electron {
+    position: absolute;
+
     background-color: #03A9F4;
-    width: 10%;
-    height: 10%;
+    width: 5%;
+    height: 5%;
     border-radius: 50%;
+}
+
+/* Thomson */
+
+.nucleus-thomson {
+    background-color: rgba(244, 67, 54, 0.5);
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+
+    border: 2px solid #F44336;
+    box-sizing: border-box;
 
     position: absolute;
     top: 25%;
     left: 25%;
 }
 
+.electron-config-thomson .atom-electron:nth-child(1) {
+    top: 35%;
+    left: 35%;
+}
+
+.electron-config-thomson .atom-electron:nth-child(2) {
+    top: 40%;
+    left: 60%;
+}
+
+.electron-config-thomson .atom-electron:nth-child(3) {
+    top: 60%;
+    left: 50%;
+}
+
+.electron-config-thomson .atom-electron:nth-child(4) {
+    top: 30%;
+    left: 45%;
+}
+
+.electron-config-thomson .atom-electron:nth-child(5) {
+    top: 55%;
+    left: 30%;
+}
+
+.electron-config-thomson .atom-electron:nth-child(6) {
+    top: 50%;
+    left: 65%;
+}
+
+/* Nucleus base */
+
+.atom-nucleus {
+    background-color: #F44336;
+    width: 10%;
+    height: 10%;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 45%;
+    left: 45%;
+}
+
+/* Rutherford */
+
+.rutherford-orbit-line {
+    position: absolute;
+
+    transform: scale(0.65);
+
+    width: 100%;
+    height: 100%;
+
+    box-sizing: border-box;
+
+    border: 2px solid #bababa;
+    border-radius: 50%;
+}
+
+.rutherford-orbit.rotate:nth-child(2) {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    transform: rotate(120deg);
+}
+
+.rutherford-orbit.rotate:nth-child(3) {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    transform: rotate(240deg);
+}
+
+.rutherford-orbit.scale {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    transform: scaleX(0.5);
+}
+
+.rutherford-orbit.orbit {
+    width: 100%;
+    height: 100%;
+
+    animation: orbit-electron 3s linear infinite;
+}
+
+.rutherford-orbit .atom-electron {
+    /* Cancel rotation and scale */
+    animation: orbit-electron-cancel 3s linear infinite;
+}
+
+.rutherford-orbit .atom-electron:nth-child(1) {
+    left: 47.5%;
+    top: 15%;
+}
+
+.rutherford-orbit .atom-electron:nth-child(2) {
+    left: 47.5%;
+    bottom: 15%;
+}
+
+
+/* Bohr */
+
+.atom-electron-orbit {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+
+    animation: orbit-electron 3s linear infinite;
+}
+
+.orbit-line {
+    position: absolute;
+
+    box-sizing: border-box;
+
+    border: 1px solid #bababa;
+    border-radius: 50%;
+}
+
+.inner-orbit .orbit-line {
+    top: 37.5%;
+    left: 37.5%;
+
+    width: 25%;
+    height: 25%;
+}
+
+.outer-orbit .orbit-line {
+    top: 27.5%;
+    left: 27.5%;
+
+    width: 45%;
+    height: 45%;
+}
+
+.inner-orbit .atom-electron:nth-child(2) {
+    top: 35%;
+    left: 47.5%;
+}
+
+.inner-orbit .atom-electron:nth-child(3) {
+    bottom: 35%;
+    left: 47.5%;
+}
+
+.outer-orbit .atom-electron:nth-child(2) {
+    top: 25%;
+    left: 47.5%;
+}
+
+.outer-orbit .atom-electron:nth-child(3) {
+    top: 47.5%;
+    right: 25%;
+}
+
+.outer-orbit .atom-electron:nth-child(4) {
+    bottom: 25%;
+    left: 47.5%;
+}
+
+.outer-orbit .atom-electron:nth-child(5) {
+    top: 47.5%;
+    left: 25%;
+}
+
 @keyframes orbit-electron {
     100% {
         transform: rotate(360deg);
+    }
+}
+
+@keyframes orbit-electron-cancel {
+    0% {
+        transform: rotate(360deg) scaleX(2);;
+    }
+
+    100% {
+        transform: rotate(0deg) scaleX(2);;
     }
 }

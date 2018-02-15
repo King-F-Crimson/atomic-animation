@@ -41,23 +41,15 @@ header hr {
 }
 
 .atomic-container {
-    display: flex;
+    display: grid;
+
+    grid-template: repeat(5, 1fr) / 2fr 1fr;
+    grid-auto-flow: column;
+    grid-row-gap: 20px;
 }
 
-.atomic-container .text-content-container {
-    flex: 1;
-}
-
-.atomic-container .animation-container {
-    flex: 2;
-
-    max-width: 300px;
-}
-
-.atomic-container .animation-container .animation {
-    position: sticky;
-    top: 50%;
-
+.atomic-container .animation {
+    position: relative;
     border: solid #bababa;
     box-sizing: border-box;
 
