@@ -1,3 +1,20 @@
+/* Animation for idle moving */
+.idle-animation {
+    width: 100%;
+    height: 100%;
+    animation: idle 3s ease infinite alternate;
+}
+
+@keyframes idle {
+    from {
+        transform: translateY(-10%);
+    }
+
+    to {
+        transform: translateY(10%);
+    }
+}
+
 /* Dalton */
 
 .atom-dalton {
@@ -5,6 +22,9 @@
     width: 50%;
     height: 50%;
     border-radius: 50%;
+
+    border: 5px solid #4527A0;
+    box-sizing: border-box;
 
     position: absolute;
     top: 25%;
@@ -30,12 +50,16 @@
     height: 50%;
     border-radius: 50%;
 
-    border: 2px solid #F44336;
+    border: 5px solid #F44336;
     box-sizing: border-box;
 
     position: absolute;
     top: 25%;
     left: 25%;
+}
+
+.electron-config-thomson .atom-electron {
+    opacity: 0.9;
 }
 
 .electron-config-thomson .atom-electron:nth-child(1) {
