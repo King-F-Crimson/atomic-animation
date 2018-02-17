@@ -257,49 +257,42 @@
 .electron-cloud {
     position: absolute;
 
-    width: 50%;
-    height: 50%;
+    width: 100%;
+    height: 100%;
+
+    background-blend-mode: lighten;
 }
 
 .electron-cloud:nth-child(1) {
-    left: 0%;
+    background:
+        radial-gradient(closest-side ellipse at 40% 40%, #ffffff, #ff5500, #3333aa, transparent),
+        radial-gradient(closest-side ellipse at 60% 60%, #ffffff, #ff5500, #3333aa, transparent);
 
-    background: radial-gradient(farthest-side ellipse at 80% 80%, #ffffff, #ff5500, #3333ff, transparent);
-
-    animation: orbital-period 3s ease infinite alternate;
+    animation: orbital-period 3s linear infinite alternate;
 }
 
 .electron-cloud:nth-child(2) {
-    right: 0%;
+    background: 
+        radial-gradient(closest-side ellipse at 40% 60%, #ffffff, #ff5500, #3333aa, transparent),
+        radial-gradient(closest-side ellipse at 60% 40%, #ffffff, #ff5500, #3333aa, transparent);
 
-    background: radial-gradient(farthest-side ellipse at 20% 80%, #ffffff, #ff5500, #3333ff, transparent);
-
-    animation: orbital-period 3s ease infinite alternate-reverse;
-}
-
-.electron-cloud:nth-child(3) {
-    left: 0%;
-    bottom: 0%;
-
-    background: radial-gradient(farthest-side ellipse at 80% 20%, #ffffff, #ff5500, #3333ff, transparent);
-
-    animation: orbital-period 3s ease infinite alternate-reverse;
-}
-
-.electron-cloud:nth-child(4) {
-    right: 0%;
-    bottom: 0%;
-
-    background: radial-gradient(farthest-side ellipse at 20% 20%, #ffffff, #ff5500, #3333ff, transparent);
-
-    animation: orbital-period 3s ease infinite alternate;
+    animation: orbital-period-alt 3s linear infinite alternate;
 }
 
 @keyframes orbital-period {
-    0% {
+    0%, 40% {
         opacity: 0;
     }
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes orbital-period-alt {
+    0% {
+        opacity: 1;
+    }
+    60%, 100% {
+        opacity: 0;
     }
 }
