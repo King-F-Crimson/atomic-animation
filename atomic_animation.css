@@ -6,11 +6,11 @@
 }
 
 @keyframes idle {
-    from {
+    0%, 100% {
         transform: translateY(-10%);
     }
 
-    to {
+    50% {
         transform: translateY(10%);
     }
 }
