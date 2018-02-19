@@ -1,0 +1,138 @@
+.neutron {
+    position: absolute;
+
+    background-color: #FFEB3B;
+
+    width: 10%;
+    height: 10%;
+
+    border-radius: 50%;
+}
+
+.neutron:nth-child(1) {
+    top: 40%;
+    left: 45%;
+}
+
+.neutron:nth-child(2) {
+    bottom: 40%;
+    left: 45%;
+}
+
+.proton {
+    position: absolute;
+
+    background-color: #F44336;
+
+    width: 10%;
+    height: 10%;
+
+    border-radius: 50%;
+}
+
+.proton:nth-child(3) {
+    top: 45%;
+    left: 40%;
+}
+
+.proton:nth-child(4) {
+    bottom: 45%;
+    right: 40%;
+}
+
+.wave {
+    position: absolute;
+
+    top: 45%;
+    left: 45%;
+
+    box-sizing: border-box;
+    border: 1px dashed;
+
+    width: 10%;
+    height: 10%;
+
+    border-radius: 50%;
+
+    animation: expand-wave 1.5s linear infinite;
+}
+
+.wave:nth-child(6) {
+    animation-delay: -0.75s;
+}
+
+@keyframes expand-wave {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(10);
+
+        opacity: 0.1;
+    }
+}
+
+.electron {
+    position: absolute;
+
+    top: 47.5%;
+    left: 47.5%;
+
+    background-color: #03A9F4;
+
+    width: 5%;
+    height: 5%;
+
+    border-radius: 50%;
+}
+
+.wave-trail {
+    position: absolute;
+
+    background-color: #81D4FA;
+
+    top: 45%;
+    left: 0%;
+
+    width: 100%;
+    height: 10%;
+
+    animation: trail-wave 1.5s linear infinite;
+
+    transform: translateX(-50%);
+}
+
+.wave-trail:after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-size: 20%, 100%;
+    background-repeat: repeat;
+    background-image: radial-gradient(closest-side circle, #000000 0%, #000000 99%, transparent 99%);
+
+    transform: translateY(50%);
+}
+
+.wave-trail:before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-size: 20%, 100%;
+    background-repeat: repeat;
+    background-image: radial-gradient(closest-side circle, #81D4FA 0%, #81D4FA 99%, transparent 99%);
+
+    transform: translate(10%, 50%);
+}
