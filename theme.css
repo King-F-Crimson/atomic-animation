@@ -50,7 +50,7 @@ header hr {
 }
 
 .atomic-container {
-    grid-template: repeat(5, 1fr) / 2fr 1fr;
+    grid-template: repeat(6, 1fr) / 2fr 1fr;
 }
 
 .nuclear-container {
@@ -73,4 +73,13 @@ header hr {
     justify-content: center;
     flex-direction: column;
 
+    padding-right: 50px;
+}
+
+.gold-foil-experiment {
+    color: #FFC107;
+}
+
+.gold-foil-experiment.animation {
+    border-color: #FFC107;
 }
