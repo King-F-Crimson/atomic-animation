@@ -45,6 +45,8 @@ header hr {
 
     grid-auto-flow: column;
     grid-row-gap: 20px;
+
+    align-items: center;
 }
 
 .atomic-container {
