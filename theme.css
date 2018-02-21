@@ -3,7 +3,6 @@ body {
     color: #bababa;
     max-width: 800px;
     margin: 2em auto;
-
     padding: 0 2em;
 
     background-color: #000000;
@@ -49,6 +48,15 @@ header hr {
 
     grid-template-columns: 2fr 1fr;
 
+    grid-column-gap: 50px;
+}
+
+@media only screen and (max-width: 800px) {
+    .section-container {
+        grid-template-columns: 1fr;
+
+        justify-items: center;
+    }
 }
 
 .section-container .animation {
@@ -66,8 +74,10 @@ header hr {
     display: flex;
     justify-content: center;
     flex-direction: column;
+}
 
-    padding-right: 50px;
+.section-container .slide p {
+    text-align: justify;
 }
 
 .gold-foil-experiment {
