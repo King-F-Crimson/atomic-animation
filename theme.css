@@ -42,8 +42,7 @@ header hr {
 
 .section-container {
     display: grid;
-
-    grid-auto-flow: column;
+    
     grid-row-gap: 20px;
 
     align-items: center;
