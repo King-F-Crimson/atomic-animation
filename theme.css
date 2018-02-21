@@ -42,18 +42,13 @@ header hr {
 
 .section-container {
     display: grid;
-    
+
     grid-row-gap: 20px;
 
     align-items: center;
-}
 
-.atomic-container {
-    grid-template: repeat(6, 1fr) / 2fr 1fr;
-}
+    grid-template-columns: 2fr 1fr;
 
-.nuclear-container {
-    grid-template: repeat(5, 1fr) / 2fr 1fr;
 }
 
 .section-container .animation {
