@@ -54,7 +54,7 @@ header hr {
 }
 
 .nuclear-container {
-    grid-template: repeat(4, 1fr) / 2fr 1fr;
+    grid-template: repeat(5, 1fr) / 2fr 1fr;
 }
 
 .section-container .animation {
