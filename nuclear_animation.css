@@ -109,7 +109,7 @@
     width: 200%;
     height: 0;
 
-    animation: trail-wave 1.5s linear infinite;
+    animation: trail-wave 0.8s linear infinite;
 }
 
 @keyframes trail-wave {
