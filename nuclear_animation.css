@@ -126,46 +126,14 @@
 
 .gamma-wave {
     position: absolute;
-    top: 45%;
+    top: 40%;
 
     width: 100%;
-    height: 10%;
+    height: 20%;
 
     display: flex;
 
     animation: move-wave 1s linear infinite;
-}
-
-.wave-part {
-    position: relative;
-
-    overflow: hidden;
-
-    width: 10%;
-    height: 50%;
-
-    transform: scale(calc(1 + 2 / (294 / 10)));
-}
-
-.wave-part:nth-child(2n) {
-    top: 50%;
-}
-
-.wave-part:before {
-    content: "";
-
-    position: absolute;
-
-    width: 100%;
-    height: 200%;
-
-    box-sizing: border-box;
-    border: 2px solid #4CAF50;
-    border-radius: 50%;
-}
-
-.wave-part:nth-child(2n):before {
-    transform: translateY(-50%);
 }
 
 @keyframes move-wave {
