@@ -10,13 +10,16 @@
 <body>
     <header>
         <div class="header-logo-base">
+            <!-- The following img tag has visibility: hidden because it is used only to set the size of the container. -->
             <img src="header.png">
         </div>
         <h1>Atomic and Nuclear Physics Basic</h1>
-        <p>Made for NCEA assessment 91172 (Demonstrate understanding of atomic and nuclear physics)</p>
+        <p>Made for NCEA assessment 91635 (Implement complex procedures to produce a specified digital media outcome) and NCEA assessment 91172 (Demonstrate understanding of atomic and nuclear physics)</p>
     </header>
     <hr>
+    <!-- hr element with large margin to separate main page blocks. -->
     <article>
+        <!-- The main page is contained in article which is then separated into sections. Each section has a section-container div that uses CSS grid display to make the page responsive. -->
         <section>
             <h2>Atomic model development</h2>
 
@@ -36,6 +39,7 @@
                     <p>The strength of this model is that it states that atoms of a same element have same property (chemically). However this model is still incorrect about atoms being indivisible, atoms are composed of subatomic particles like electrons, protons, and neutrons.</p>
                 </div>
 
+                <!-- Each animation is contained within divs with the same class for consistency. The elements that make up the animation have their shape defined in the CSS files. -->
                 <div class="animation">
                     <div class="idle-animation">
                         <div class="atom-dalton"></div>
@@ -56,6 +60,7 @@
                     <div class="idle-animation">
                         <div class="nucleus-thomson"></div>
 
+                        <!-- The electrons are not animated separately so they are contained in a container which is then animated. -->
                         <div class="electron-config-thomson">
                             <div class="atom-electron"></div>
                             <div class="atom-electron"></div>
@@ -67,6 +72,7 @@
                     </div>
                 </div>
 
+                <!-- This div has a different color in the styling to emphasize its role as an extra information (e.g. it's not about atomic model like the other elements on the same hierarchy). -->
                 <div class="slide gold-foil-experiment">
                     <h3>Rutherford's gold foil experiment</h3>
 
@@ -79,8 +85,11 @@
                     <div class="gold-foil"></div>
                     <div class="zinc-screen"></div>
                     <div class="particle-shooter"></div>
+
+                    <!-- The initial ray is a separate element from the deflected rays, which are visible on different times. -->
                     <div class="initial-ray"></div>
 
+                    <!-- The deflected rays are defined as children with differing properties, making the initial-ray seems to be diffracted into many rays. -->
                     <div class="deflected-rays">
                         <div></div>
                         <div></div>
@@ -97,19 +106,26 @@
                     <p>The strength of this model is that it shows that the positive charge of atoms is located in the nucleus. However it doesn't explain about why and how electrons stay in orbit.</p>
                 </div>
 
+                <!-- This animation is defined with many layers with different transforms. -->
                 <div class="animation">
                     <div class="atom-nucleus"></div>
 
+                    <!-- The "rotate" div gives each orbit the initial, unchanging rotation to form the initial hexagonal placement. -->
                     <div class="rutherford-orbit rotate">
+                        <!-- The "scale" div applies the scale transform to squash the div. This has to be applied after the rotation to scale it in the right axis (local x axis, not the global x axis). -->
                         <div class="rutherford-orbit scale">
+                            <!-- The orbit line is a ellipse div without any fill, only border. It is not animated. -->
                             <div class="rutherford-orbit-line"></div>
+                            <!-- The animation is applied here. The "orbit" div is rotated according to the animation. Having the rotation after the scaling allows it to rotate not in a circular path but an ellipsoid path. -->
                             <div class="rutherford-orbit orbit">
+                                <!-- The "atom-electron" div also has an animation to the scale which cancels out the previous scaling, making its shape round again. -->
                                 <div class="atom-electron"></div>
                                 <div class="atom-electron"></div>
                             </div>
                         </div>
                     </div>
 
+                    <!-- The next "rotate" div has a different initial rotation to make the hexagonal arrangement. -->
                     <div class="rutherford-orbit rotate">
                         <div class="rutherford-orbit scale">
                             <div class="rutherford-orbit-line"></div>
@@ -139,6 +155,7 @@
                     <p>The strength of this model is that it proposed that electrons are orbiting the nucleus at an orbit with fixed radius and energy level. However electrons do not actually orbit the nucleus, because if they do it does not explain why they don't emit energy and eventually collapse into the atom nucleus, this model also does not work well with heavier atoms.</p>
                 </div>
 
+                <!-- This animation works like the previous one, but because it is on a circular orbit, it does not need the complex scaling and cancel-scaling for the ellipsoid orbit path. -->
                 <div class="animation">
                     <div class="atom-nucleus"></div>
 
@@ -164,7 +181,8 @@
 
                     <p>The strength of this model is that it states that electrons do not orbit the atom nucleus, instead they exist in probability clouds where their location are likely to be with up to 95% accuracy. It is still widely accepted as the most accurate model of atom currently available.</p>
                 </div>
-
+                
+                <!-- The electron cloud animation works by animating the opacity property, which makes it seems to be transitioning to different states. -->
                 <div class="animation">
                     <div class="electron-cloud"></div>
                     <div class="electron-cloud"></div>
@@ -184,6 +202,7 @@
                 </div>
 
                 <div class="animation">
+                    <!-- The "rotator" div is the one that is rotated, making the children rotate with it. This ensures the timing and rotation origin is the same. -->
                     <div class="rotator">
                         <div class="radioactive-symbol"></div>
                         <div class="radioactive-center">
@@ -194,6 +213,7 @@
                         <div class="radioactive-center-center"></div>
                     </div>
 
+                    <!-- The "wave" divs are animated with different initial time, making it interlace with each other. The animation expands the wave from the center outwards while making it more transparent over time. -->
                     <div>
                         <div class="wave"></div>
                         <div class="wave"></div>

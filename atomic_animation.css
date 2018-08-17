@@ -1,4 +1,4 @@
-/* Animation for idle moving */
+/* Animation for idle up-and-down movement. */
 .idle-animation {
     width: 100%;
     height: 100%;
@@ -17,6 +17,9 @@
 
 /* Dalton */
 
+/* This styling defines a circle to represents the atom in Dalton's model.
+ * The colors are derived from Google's material design color.
+ */
 .atom-dalton {
     background-color: #673AB7;
     width: 50%;
@@ -58,10 +61,14 @@
     left: 25%;
 }
 
+/* Transparency makes the electrons look like inside the atom, not on top of
+ * it.
+ */
 .electron-config-thomson .atom-electron {
     opacity: 0.9;
 }
 
+/* Spread the electron divs in a semi-random way inside the atom. */
 .electron-config-thomson .atom-electron:nth-child(1) {
     top: 35%;
     left: 35%;

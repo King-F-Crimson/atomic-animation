@@ -8,6 +8,7 @@ body {
     background-color: #000000;
 }
 
+/* Header uses mask to make the color modifiable. */
 header .header-logo-base {
     mask-image: url("header.png");
     mask-size: contain;
@@ -22,6 +23,9 @@ header .header-logo-base {
     background-color: #bababa;
 }
 
+/* This element is invisible because it is used only to set the size of its
+ * container, which should always be the same size as the image. 
+ */
 header img {
     max-width: 100%;
     visibility: hidden;
@@ -51,6 +55,10 @@ hr {
     grid-column-gap: 50px;
 }
 
+/* Media query used for making the page responsive by adapting to small
+ * screens. It puts the information and the animation in a single column,
+ * allowing it to fit.
+ */
 @media only screen and (max-width: 800px) {
     .section-container {
         grid-template-columns: 1fr;
