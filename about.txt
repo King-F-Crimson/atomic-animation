@@ -1,0 +1,13 @@
+This project was originally made for a Physics assessment. I chose to use only pure CSS animation without any external library mainly to practice my CSS animation skill. The other benefit from using only CSS for animation without any Javascript code is that the page is going to consume less memory, less CPU usage, and it is usually more light-weight than a Javascript animation, especially when it requires to include an external library.
+
+No Javascript means that I have to use div styling to create the animation components and @keyframes to animate them. Also it means that I cannot use the canvas element because it requires Javascript. I have made some canvas based project, but in this case I find it can be made faster using CSS than Javascript + canvas. The reason is using canvas I need to create a lot of boilerplates and/or use an external library, which for the sake of simplicity I didn't.
+
+Also I avoid using raster based images because I want it to look sharp in every screen. The page is also designed to be responsive so it can be viewed in smaller screens like on smart phones. The only raster image I use is not visible on the final project and is only there to make a div as large as the image. It is required because I would then set a clipping mask to the div with an SVG image.
+
+How did I test and make sure that the digital outcome was correct?
+
+To make sure that the animations are accurate about the Physics concepts specified, I asked for feedbacks during the animation process with the Physics teacher in my school, Cairan. He provided feedbacks such as how the particles would look like according to the different models required and how some waves are supposed to look like.
+
+And to ensure the animation is high quality and would look good on different screen sizes, I used the tools provided in Firefox to check how it would look like on smaller and larger screens. I also tested how the page, especially the animation would look like in different browsers such as Google Chrome, Mozilla Firefox, and Safari.
+
+I used Git during the whole development process. This allows me to revert on previous commits on the project when necessary, create branches to make experimental features and animations, and view the development log.
