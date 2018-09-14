@@ -1,3 +1,27 @@
+/* Media query used for making the page responsive by adapting to small
+ * screens. It puts the information and the animation in a single column,
+ * allowing it to fit.
+ */
+@media only screen and (max-width: 800px) {
+    .section-container {
+        grid-template-columns: 1fr;
+
+        justify-items: center;
+    }
+}
+
+@media print {
+    .section-container {
+        grid-template-columns: 1fr;
+
+        justify-items: center;
+    }
+
+    .animation {
+        display: none;
+    }
+}
+
 body {
     font-family: "Open Sans";
     color: #bababa;
@@ -64,18 +88,6 @@ a:hover {
     grid-column-gap: 50px;
 }
 
-/* Media query used for making the page responsive by adapting to small
- * screens. It puts the information and the animation in a single column,
- * allowing it to fit.
- */
-@media only screen and (max-width: 800px) {
-    .section-container {
-        grid-template-columns: 1fr;
-
-        justify-items: center;
-    }
-}
-
 .section-container .animation {
     position: relative;
     border: solid #bababa;
@@ -113,16 +125,4 @@ a:hover {
 
 footer {
     height: 50vh;
-}
-
-@media print {
-    .section-container {
-        grid-template-columns: 1fr;
-
-        justify-items: center;
-    }
-
-    .animation {
-        display: none;
-    }
 }
