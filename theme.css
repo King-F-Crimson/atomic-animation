@@ -1,7 +1,7 @@
 body {
     font-family: "Open Sans";
     color: #bababa;
-    max-width: 800px;
+    max-width: 60em;
     margin: 2em auto;
     padding: 0 2em;
 
@@ -109,7 +109,7 @@ footer {
  * screens. It puts the information and the animation in a single column,
  * allowing it to fit.
  */
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 60em) {
     .section-container {
         grid-template-columns: 2fr 1fr;
 
